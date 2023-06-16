@@ -1,23 +1,23 @@
 site_name: LBM Wiki
+plugins:
+  - search
+  - table-reader
 nav:
   - Home: index.md
   - Documentation:
-    - Main page: documentation.md
+    - Home: documentation.md
     - Events: documentation/Events.md
-    - JMP Tables: documentation/JMP.md
     - Flags: documentation/Flags.md
-    - Locations & Doors: documentation/Maps_Rooms_Doors.md
-    - Parameter files: documentation/Parameters.md  
   - Tutorials:
-    - Tutorials: tutorials.md
+    - tutorials.md
   - Research:
-    - Main page: research.md
+    - research.md
     - File formats: research/file_formats.md
   - Tools: 
-    - Main page: tools.md
-    - General software: tools/general_software.md
-    - file conversion tools: tools/convert_tools.md
-    - editing tools: tools/edit_tools.md
+    - tools.md
+    - General Software: tools/general_software.md
+    - File Conversion Tools: tools/convert_tools.md
+    - Editing Tools: tools/edit_tools.md
   - Code:
     - RAM: codes/RAM_codes.md
     - DOL: codes/DOL_codes.md
@@ -32,7 +32,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.indexes
-    #- navigation.footer 
+    - navigation.footer 
     - navigation.top
     - search.suggest
     - search.highlight
@@ -62,8 +62,11 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/neoteroi-mkdocs.css
 
 markdown_extensions:
+  - neoteroi.cards
+  - neoteroi.spantable
   - attr_list
   - pymdownx.critic
   - pymdownx.caret
@@ -83,7 +86,9 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - glossary.md
   - admonition
   - pymdownx.arithmatex:
       generic: true

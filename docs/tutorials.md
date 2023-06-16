@@ -33,7 +33,7 @@ Below is a list of tutorials for modding and related software.
 === "Specific Tutorials"
     ##Tutorials for hacking specific things
 
-	1. [How to Change Ghost Colors](tutorials/14_Ghost_Color.md)
+    1. [How to Change Ghost Colors](tutorials/14_Ghost_Color.md)
     2. [How to Create Custom Furniture](tutorials/15_Custom_furniture.md)
     3. [How to Change the GameID](tutorials/16_GameID.md)
     4. [How to Edit Textures for Luigi, Poltergust, and Mario](tutorials/17_LMP_textures.md)
