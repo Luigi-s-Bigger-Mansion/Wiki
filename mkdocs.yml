@@ -13,7 +13,7 @@ nav:
   - Research:
     - research.md
     - File formats: research/file_formats.md
-  - Tools: 
+  - Tools:
     - tools.md
     - General Software: tools/general_software.md
     - File Conversion Tools: tools/convert_tools.md
@@ -32,28 +32,28 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.indexes
-    - navigation.footer 
+    - navigation.footer
     - navigation.top
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-  custom_dir: docs/overrides    
+  custom_dir: docs/overrides
   language: en
   palette:
 
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
       primary: teal
       accent: purple
 
-    - scheme: slate 
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode    
+        name: Switch to light mode
       primary: teal
       accent: lime
 

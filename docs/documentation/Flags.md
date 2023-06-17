@@ -34,40 +34,90 @@ The table below lists all 255 flags and what they are tied to.
 ### How to Check Flags
 
 ## Savable Flags
-## Room Flags
-## Map Flags
 
+::spantable:: class=":white_check_mark:"
 
-::spantable::
-
-| Flag #                                                                                                                                                                                                                                                                                                                                                                        | JMP Map # | JMP Files                                                            | Events                             | ASM Turns Flag ON | ASM Executes When Flag Is ON | ASM Turns Flag Off |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------- | ---------------------------------- | ----------------- | ---------------------------- | ------------------ |
-| 0                                                                                                                                                                                                                                                                                                                                                                             | All       | All                                                                  | N/A                                | N/A               | N/A                          | N/A                |
-| This flag, similar to the concept of event00, is used as a placeholder for jump tables. If a JMP entry doesn't require an appear_flag, disappear_flag, EventFlag, etc. value, then it will use 0 as a value. Which means, if you enable this flag, almost all JMP entries will be disabled! It's best to leave this flag alone. @span                                         |           |                                                                      |                                    |                   |                              |                    |
-| 1                                                                                                                                                                                                                                                                                                                                                                             | map2      | characterinfo, eventinfo, objinfo, observerinfo, teidencharacterinfo | event01                            | 0x8674            | 0x32364                      | N/A                |
-| Turned on at the end of event01. This disables the event from happening again, enables the Foyer Toad cutscene event17, enables the falling behavior for the Foyer Chandelier due to move type 20, and makes the event01 Parlor cutscene models disappear. This flag is automatically turned on with ASM if playing on a save file that has been cleared at least once. @span |           |                                                                      |                                    |                   |                              |                    |
-| 2                                                                                                                                                                                                                                                                                                                                                                             | map2      | characterinfo                                                        | event85, event96                   | N/A               | N/A                          | N/A                |
-| Turned on in event96 when Luigi has collected 20 or more Boos. This flag disables event85 and the bmtelesa model in the Attic hallway. @span                                                                                                                                                                                                                                  |           |                                                                      |                                    |                   |                              |                    |
-| 3                                                                                                                                                                                                                                                                                                                                                                             | map2      | characterinfo, eventinfo, keyinfo                                    | event48                            | 0x8684, 0x18CFC   | 0x18BFC                      | N/A                |
-| Turned on with ASM once Luigi attempts to open the Parlor doors on a new save file and activates event07. This flag will make sure the ASM that plays the ghost laughter sound effect and turns on the flag won't execute again. This flag is automatically turned on with ASM if playing on a save file that has been cleared at least once. @span                           |           |                                                                      |                                    |                   |                              |                    |
-| 4                                                                                                                                                                                                                                                                                                                                                                             | map2      | characterinfo, eventinfo, keyinfo                                    | event07                            | 0x868C            | N/A                          | N/A                |
-| Turned on at the end of event07, disabling all of the cutscene models needed for event07, but it also enables dluige01 for event01. This flag is automatically turned on with ASM if playing on a save file that has been cleared at least once. @span                                                                                                                        |           |                                                                      |                                    |                   |                              |                    |
-| 5                                                                                                                                                                                                                                                                                                                                                                             | N/A       | N/A                                                                  | event08, event26                   | 0x8694            | N/A                          | N/A                |
-|                                                                                                                                                                                                                                                                                                                                                                               |           |                                                                      |                                    |                   |                              |                    |
-| 6                                                                                                                                                                                                                                                                                                                                                                             | map3      | eventinfo                                                            | event08, event26                   | 0x869C            | N/A                          | N/A                |
-|                                                                                                                                                                                                                                                                                                                                                                               |           |                                                                      |                                    |                   |                              |                    |
-| 7                                                                                                                                                                                                                                                                                                                                                                             | N/A       | N/A                                                                  | event02, event08, event26, event28 | 0x86A4            | 0x9BD0                       | N/A                |
-|                                                                                                                                                                                                                                                                                                                                                                               |           |                                                                      |                                    |                   |                              |                    |
-| 8                                                                                                                                                                                                                                                                                                                                                                             | N/A       | N/A                                                                  | event08 (PAL)                      | N/A               | N/A                          | N/A                |
-|                                                                                                                                                                                                                                                                                                                                                                               |           |                                                                      |                                    |                   |                              |                    |
-| 9                                                                                                                                                                                                                                                                                                                                                                             | N/A       | N/A                                                                  | event02, event28                   | N/A               | N/A                          | N/A                |
-|                                                                                                                                                                                                                                                                                                                                                                               |           |                                                                      |                                    |                   |                              |                    |
-| 10                                                                                                                                                                                                                                                                                                                                                                            | map2      | eventinfo                                                            | event04, event17, event45, event94 | N/A               | N/A                          | N/A                |
-| 11                                                                                                                                                                                                                                                                                                                                                                            | map2      | eventinfo, teidenobserverinfo                                        | event92, event93                   | N/A               | N/A                          | N/A                |
-| 12                                                                                                                                                                                                                                                                                                                                                                            | map2      | eventinfo                                                            | N/A                                | 0xACE90           | N/A                          | N/A                |
-| 13                                                                                                                                                                                                                                                                                                                                                                            | map2      | eventinfo                                                            | event36, event37                   | N/A               | N/A                          | N/A                |
-| 14                                                                                                                                                                                                                                                                                                                                                                            | map2      | eventinfo, keyinfo, observerinfo                                     | N/A                                | N/A               | N/A                          | N/A                |
-| 15                                                                                                                                                                                                                                                                                                                                                                            | map2      | eventinfo                                                            | event29                            | 0x72424           | N/A                          | N/A                |
-| 16                                                                                                                                                                                                                                                                                                                                                                            | N/A       | N/A                                                                  | event63                            | N/A               | N/A                          | N/A                |
+| Flag # | Flag Tied to JMP? | Flag Tied to Events? | Flag Tied to ASM? |
+| ------ | ----------------- | -------------------- | ----------------- |
+| 0      |                   |                      | :x:               |
+| 1      | :x:               | :x:                  | :x:               |
+| 2      | :x:               | :x:                  |                   |
+| 3      | :x:               | :x:                  | :x:               |
+| 4      | :x:               | :x:                  | :x:               |
+| 5      |                   | :x:                  | :x:               |
+| 6      | :x:               | :x:                  | :x:               |
+| 7      |                   | :x:                  | :x:               |
+| 8      |                   | :x:                  |                   |
+| 9      |                   | :x:                  |                   |
+| 10     | :x:               | :x:                  |                   |
+| 11     | :x:               | :x:                  |                   |
+| 12     | :x:               |                      | :x:               |
+| 13     | :x:               | :x:                  |                   |
+| 14     | :x:               |                      |                   |
+| 15     | :x:               | :x:                  | :x:               |
+| 16     |                   | :x:                  |                   |
+| 17     | :x:               | :x:                  | :x:               |
+| 18     | :x:               | :x:                  | :x:               |
+| 19     | :x:               | :x:                  |                   |
+| 20     |                   | :x:                  |                   |
+| 21     | :x:               | :x:                  | :x:               |
+| 22     | :x:               | :x:                  | :x:               |
+| 23     |                   | :x:                  |                   |
+| 24     | :x:               | :x:                  | :x:               |
+| 26     |                   | :x:                  |                   |
+| 27     | :x:               | :x:                  | :x:               |
+| 29     |                   | :x:                  |                   |
+| 30     | :x:               | :x:                  | :x:               |
+| 32     |                   | :x:                  |                   |
+| 33     | :x:               | :x:                  | :x:               |
+| 35     | :x:               | :x:                  |                   |
+| 36     | :x:               |                      | :x:               |
+| 37     | :x:               | :x:                  |                   |
+| 38     | :x:               | :x:                  |                   |
+| 39     | :x:               | :x:                  | :x:               |
+| 40     | :x:               | :x:                  | :x:               |
+| 41     | :x:               |                      | :x:               |
+| 42     |                   | :x:                  |                   |
+| 43     | :x:               |                      | :x:               |
+| 44     | :x:               |                      | :x:               |
+| 45     | :x:               |                      | :x:               |
+| 46     | :x:               | :x:                  | :x:               |
+| 47     | :x:               |                      | :x:               |
+| 48     |                   |                      | :x:               |
+| 49     | :x:               |                      | :x:               |
+| 50     | :x:               | :x:                  | :x:               |
+| 51     | :x:               |                      | :x:               |
+| 52     | :x:               | :x:                  |                   |
+| 53     |                   | :x:                  |                   |
+| 54     | :x:               | :x:                  |                   |
+| 55     | :x:               |                      | :x:               |
+| 56     | :x:               | :x:                  | :x:               |
+| 57     | :x:               | :x:                  |                   |
+| 58     |                   | :x:                  |                   |
+| 59     | :x:               | :x:                  |                   |
+| 61     | :x:               | :x:                  | :x:               |
+| 62     | :x:               |                      | :x:               |
+| 63     | :x:               | :x:                  | :x:               |
+| 64     |                   |                      | :x:               |
+| 65     |                   | :x:                  | :x:               |
+| 66     | :x:               | :x:                  | :x:               |
+| 67     | :x:               | :x:                  | :x:               |
+| 68     | :x:               | :x:                  | :x:               |
+| 69     |                   | :x:                  |                   |
+| 70     | :x:               |                      |                   |
+| 71     |                   | :x:                  |                   |
+| 72     | :x:               |                      |                   |
+| 73     | :x:               | :x:                  |                   |
+| 74     | :x:               | :x:                  | :x:               |
+| 75     | :x:               | :x:                  | :x:               |
+| 76     | :x:               |                      |                   |
+| 77     | :x:               | :x:                  |                   |
+| 78     |                   |                      | :x:               |
+| 79     |                   |                      | :x:               |
+| 80     | :x:               |                      | :x:               |
+| 81     | :x:               | :x:                  | :x:               |
+| 82     | :x:               | :x:                  | :x:               |
+| 83     | :x:               | :x:                  | :x:               |
+| 84     |                   | :x:                  |                   |
 
 ::end-spantable::

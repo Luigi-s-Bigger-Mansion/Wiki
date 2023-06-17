@@ -6,7 +6,7 @@ hide:
 ###### ![](assets/welcome1.png) { align=center }
 <figure Markdown>
 # Welcome to the<br>**Luigi's Bigger Mansion Wiki!**
-###Covering Luigi's Mansion (GCN)<br>modding since 2005!
+###Covering Luigi's Mansion (GCN :simple-nintendogamecube:) <br>modding since 2005!
 </figure>
 #####[Join our Discord!](https://discord.gg/lbm){ .md-button .md-button--primary } { align=center }
 ------
