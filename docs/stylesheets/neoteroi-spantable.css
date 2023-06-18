@@ -27,6 +27,7 @@
   min-width: 5rem;
   padding: 0.9375em 1.25em;
   vertical-align: top;
+  text-align: middle;
 }
 
 .span-table td:first-child {
@@ -43,7 +44,6 @@
 
 .span-table [colspan],
 .span-table [rowspan] {
-  font-weight: bold;
   border: 0.05rem solid var(--md-typeset-table-color);
 }
 

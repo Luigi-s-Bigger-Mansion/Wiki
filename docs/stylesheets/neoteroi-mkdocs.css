@@ -1361,15 +1361,19 @@ details .nt-timeline.vertical.center:not(.alternate) .nt-timeline-item .nt-timel
   overflow: auto;
   touch-action: auto;
   border-top: 0.05rem solid var(--md-typeset-table-color);
+  border-right: 0.05rem solid var(--md-typeset-table-color);
   padding: 0.9375em 1.25em;
-  vertical-align: top;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .span-table tr:first-child td {
+  background-color: rgba(0, 0, 0, 0.15);
   font-weight: 700;
   min-width: 5rem;
   padding: 0.9375em 1.25em;
-  vertical-align: top;
+  vertical-align: middle;
+  border-right: rgba(0, 0, 0, 0.15);
 }
 
 .span-table td:first-child {
@@ -1386,7 +1390,6 @@ details .nt-timeline.vertical.center:not(.alternate) .nt-timeline-item .nt-timel
 
 .span-table [colspan],
 .span-table [rowspan] {
-  font-weight: bold;
   border: 0.05rem solid var(--md-typeset-table-color);
 }
 
