@@ -1,7 +1,6 @@
 site_name: LBM Wiki
 plugins:
   - search
-  - table-reader
   - git-revision-date-localized:
       exclude:
         - index.md
