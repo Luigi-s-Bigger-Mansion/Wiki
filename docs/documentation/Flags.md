@@ -1,4 +1,4 @@
-&nbsp;&nbsp;&nbsp;&nbsp;:octicons-info-16:&nbsp;&nbsp;*For the flag glossary, [click here](Glossary).*
+&nbsp;&nbsp;&nbsp;&nbsp;:octicons-info-16:&nbsp;&nbsp;*For the flag glossary, [click here](https://lbmwiki.net/documentation/flags/Glossary).*
 
 ### **Description**
 
@@ -140,4 +140,4 @@ These move types interact with flags in a more specific manner.
 ::end-spantable::
 
 ### **Availabile Flags**
-See the [flag glossary](Glossary).
+See the [flag glossary](lbmwiki.net/flags/Glossary).

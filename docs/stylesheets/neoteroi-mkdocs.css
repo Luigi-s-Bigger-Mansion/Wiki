@@ -1357,7 +1357,7 @@ details .nt-timeline.vertical.center:not(.alternate) .nt-timeline-item .nt-timel
   padding: 0.2rem;
   background-color: var(--md-default-bg-color);
   font-size: 0.64rem;
-  max-width: 100%;
+  max-width: auto;
   overflow: auto;
   touch-action: auto;
   border-top: 0.05rem solid var(--md-typeset-table-color);

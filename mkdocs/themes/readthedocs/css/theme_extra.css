@@ -129,7 +129,6 @@ form .search-query {
  */
 .rst-content .section .docutils {
     width: 100%;
-    overflow: auto;
     display: block;
     border: none;
 }
